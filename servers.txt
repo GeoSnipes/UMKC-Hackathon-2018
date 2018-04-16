@@ -1,1 +1,1 @@
-{"web": ["ms1130.utah.cloudlab.us"],"mail": ["ms1129.utah.cloudlab.us", "ms1139.utah.cloudlab.us"],"private":["ms1101.utah.cloudlab.us","ms1106.utah.cloudlab.us"]}
+{"web": ["ms0836.utah.cloudlab.us"],"mail": ["ms0823.utah.cloudlab.us", "ms0820.utah.cloudlab.us"],"private":["ms0814.utah.cloudlab.us","ms0842.utah.cloudlab.us"],"info":"List of external servers using CloudLab"}
