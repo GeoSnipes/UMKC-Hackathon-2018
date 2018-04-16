@@ -1,13 +1,15 @@
 import json
 import os
+import sys
 
-with open("servers.txt") as server_list:
+with open("/home/geo/.jenkins/workspace/testcloudlab/"+sys.argv[1]) as server_list:
     servers = json.load(server_list)
 
-print(json.dumps(servers, indent=4))
-
-for node in servers['mail']:
-    ssh_string = "ssh geoWe@"+node+" -i /home/geo/.jenkins/workspace/testcloudlab/clab_rsa 'bash -s' < "
-    stript_string = "~/UMKC-Hackathon-2018/test.sh"
-    pipe_string = " >> 'stdout_"+node+"_'$(date +'%m-%d-%y') 2>> 'stderr_"+node+"_'$(date +'%m-%d-%y')"
-    os.system(ssh_string + stript_string + pipe_string)
+#print(json.dumps(servers, indent=4))
+print(' '.join(servers[sys.argv[2]]))
+if False:
+    for node in servers['mail']:
+        ssh_string = "ssh geoWe@"+node+" -i /home/geo/.jenkins/workspace/testcloudlab/ssh/id_rsa.pub 'bash -s' < "
+        stript_string = "/home/geo/.jenkins/workspace/testcloudlab/test.sh"
+        pipe_string = " >> '/home/geo/.jenkins/workspace/testcloudlab/stdout_"+node+"_'$(date +'%m-%d-%y') 2>> '/home/geo/.jenkins/workspace/testcloudlab/stderr_"+node+"_'$(date +'%m-%d-%y')"
+        os.system(ssh_string + stript_string + pipe_string)
