@@ -1,6 +1,3 @@
 #!/bin/bash
 hostname
-whoami
-whoami
-ifconfig | grep inet
-me
+sudo apt-get update
