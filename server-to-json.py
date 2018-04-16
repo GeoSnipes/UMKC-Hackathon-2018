@@ -7,6 +7,8 @@ with open("/home/geo/.jenkins/workspace/testcloudlab/"+sys.argv[1]) as server_li
 
 #print(json.dumps(servers, indent=4))
 print(' '.join(servers[sys.argv[2]]))
+
+# below not important in new version, just saved for future reference
 if False:
     for node in servers['mail']:
         ssh_string = "ssh geoWe@"+node+" -i /home/geo/.jenkins/workspace/testcloudlab/ssh/id_rsa.pub 'bash -s' < "
