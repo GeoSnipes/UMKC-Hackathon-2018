@@ -4,7 +4,8 @@
 <pre>
 *Python installed
 *Instructions to forward to servers on system
-*List of servers stored as json</pre>
+*List of servers stored as json
+*Server keys already installed</pre>
 
 <h3>Instructions</h3>
 <pre>
